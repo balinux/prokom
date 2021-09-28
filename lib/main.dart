@@ -1,3 +1,5 @@
+import 'dart:ui';
+
 import 'package:flutter/material.dart';
 
 void main() {
@@ -14,7 +16,6 @@ class MyApp extends StatefulWidget {
 class _MyAppState extends State<MyApp> with WidgetsBindingObserver {
   @override
   void initState() {
-    // TODO: implement initState
     super.initState();
     WidgetsBinding.instance.addObserver(this);
   }
@@ -22,13 +23,11 @@ class _MyAppState extends State<MyApp> with WidgetsBindingObserver {
   @override
   void dispose() {
     WidgetsBinding.instance.removeObserver(this);
-    // TODO: implement dispose
     super.dispose();
   }
 
   @override
   void didChangeAppLifecycleState(AppLifecycleState state) {
-    // TODO: implement didChangeAppLifecycleState
     super.didChangeAppLifecycleState(state);
 
 // check status state app saat inactive
@@ -46,7 +45,14 @@ class _MyAppState extends State<MyApp> with WidgetsBindingObserver {
     return MaterialApp(
         home: Scaffold(
       appBar: AppBar(
-        title: Text("pemrograman Komputer"),
+        title: Text(
+          "Pemrograman Komputer dan Mobile",
+          style: TextStyle(
+              color: Colors.blue, 
+              fontSize: 24, 
+              fontStyle: FontStyle.italic
+          ),
+        ),
       ),
       body: Container(
         child: Center(
