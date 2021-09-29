@@ -58,7 +58,7 @@ class _MyAppState extends State<MyApp> with WidgetsBindingObserver {
           width: 48.0,
           height: 48.0,
           child: Center(
-            child: Text("Halo saya container"),
+            child: Image.asset('assets/images/image1.png')
           ),
         ),
       ),
