@@ -51,23 +51,17 @@ class _MyAppState extends State<MyApp> with WidgetsBindingObserver {
               color: Colors.blue, fontSize: 24, fontStyle: FontStyle.italic),
         ),
       ),
-      body: Container(
-          child: Row(
-        children: const <Widget>[
-          Expanded(
-            child: Text('UI Design', textAlign: TextAlign.center),
+      body: Center(
+        child: Container(
+          margin: const EdgeInsets.all(10.0),
+          color: Colors.amber[600],
+          width: 48.0,
+          height: 48.0,
+          child: Center(
+            child: Text("Halo saya container"),
           ),
-          Expanded(
-            child: Text('Prokom', textAlign: TextAlign.center),
-          ),
-          Expanded(
-            child: FittedBox(
-              fit: BoxFit.contain, // otherwise the logo will be tiny
-              child: FlutterLogo(),
-            ),
-          ),
-        ],
-      )),
+        ),
+      ),
     ));
   }
 }
