@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:pemrograman_komputer/providers/CartProvider.dart';
 import 'package:pemrograman_komputer/screens/DetailPage.dart';
+import 'package:provider/src/provider.dart';
 
 class Homepage extends StatefulWidget {
   const Homepage({Key key}) : super(key: key);
@@ -15,14 +17,27 @@ class _HomepageState extends State<Homepage> {
       appBar: AppBar(
         title: Text('Home Page'),
       ),
-      body: Center(
-        child: ElevatedButton(
-            onPressed: () {
-              Route route =
-                  MaterialPageRoute(builder: (context) => DetailPage());
-              Navigator.push(context, route);
-            },
-            child: Text("Go to Detail Page")),
+      body: Column(
+        mainAxisAlignment: MainAxisAlignment.center,
+        children: [
+          Center(
+            child: ElevatedButton(
+                onPressed: () {
+                  Route route =
+                      MaterialPageRoute(builder: (context) => DetailPage());
+                  Navigator.push(context, route);
+                },
+                child: Text("Go to Detail Page")),
+          ),
+          Center(
+            child: ElevatedButton(
+                onPressed: () {
+                  context.read<Cart>().addecmommerceCart(1);
+                },
+                child: Text("tambah belanja")),
+          ),
+          Text('${context.watch<Cart>().getEcommerceCart}')
+        ],
       ),
     );
   }
