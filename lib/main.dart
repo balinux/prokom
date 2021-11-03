@@ -33,7 +33,7 @@ class HomePage extends StatelessWidget {
             Route route = MaterialPageRoute(builder: (context) => ProfilePage());
             Navigator.push(context, route);
           },
-          child: Text($name),
+          child: Text("tes")
         ),
       ),
     );
