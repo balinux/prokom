@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:pemrograman_komputer/learn-http-request.dart';
+import 'package:pemrograman_komputer/learn-json.dart';
 import 'package:pemrograman_komputer/providers/CartProvider.dart';
 import 'package:pemrograman_komputer/screens/DetailPage.dart';
 import 'package:provider/src/provider.dart';
@@ -20,6 +22,24 @@ class _HomepageState extends State<Homepage> {
       body: Column(
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
+          Center(
+            child: ElevatedButton(
+                onPressed: () {
+                  Route route =
+                      MaterialPageRoute(builder: (context) => LearnJson());
+                  Navigator.push(context, route);
+                },
+                child: Text("Learn Json")),
+          ),
+          Center(
+            child: ElevatedButton(
+                onPressed: () {
+                  Route route = MaterialPageRoute(
+                      builder: (context) => LearnHttpRequest());
+                  Navigator.push(context, route);
+                },
+                child: Text("Learn Http Request")),
+          ),
           Center(
             child: ElevatedButton(
                 onPressed: () {
