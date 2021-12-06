@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:pemrograman_komputer/providers/CartProvider.dart';
 import 'package:pemrograman_komputer/screens/HomePage.dart';
 import 'package:pemrograman_komputer/screens/map/learn_map.dart';
+import 'package:pemrograman_komputer/screens/mysql/mysql_page.dart';
 import 'package:provider/provider.dart';
 
 void main() {
@@ -20,7 +21,8 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'prokom',
       // home: Homepage(),
-      home: LearnMap(),
+      // home: LearnMap(),
+      home: MysqlPage(),
       debugShowCheckedModeBanner: false,
     );
   }
